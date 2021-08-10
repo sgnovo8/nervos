@@ -9,3 +9,7 @@ Use Force Bridge To Deposit Tokens From Ethereum To Polyjuice
   Ethereum address used to generate the Deposit Receiver Address:
   
     0x47Cb28b6510215CccF49d3fe482e47f9b24db7d1
+
+Link to the Etherscan explorer for the successful Force Bridge transaction:
+
+https://rinkeby.etherscan.io/tx/0x87854ec0bac6e945217f9876e4a31df2ceb0a93a4735d3d5ee35024a1f413f89

@@ -15,6 +15,6 @@ Use Force Bridge To Deposit Tokens From Ethereum To Polyjuice
     https://rinkeby.etherscan.io/tx/0x87854ec0bac6e945217f9876e4a31df2ceb0a93a4735d3d5ee35024a1f413f89
 
 
-- Link to the Nervos explorer for the successful Force bridge transaction:
+- Link to the Nervos explorer for the successful Force bridge transaction: https://explorer.nervos.org/aggron/transaction/0xf053fa8e0dea6b9487f164140e56da197674a890b255f6f6e400d9ed97abd124
     
     

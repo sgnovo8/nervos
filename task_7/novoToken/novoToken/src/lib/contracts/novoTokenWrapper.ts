@@ -1,21 +1,21 @@
 import Web3 from 'web3';
-import * as DlinhNFTJson from '../../../build/contracts/DlinhNFT.json';
-import { DlinhNFT } from '../../types/DlinhNFT';
+import * as novoTokenJson from '../../../build/contracts/novoToken.json';
+import { novoToken } from '../../types/novoToken';
 
 const DEFAULT_SEND_OPTIONS = {
     gas: 6000000
 };
 
-export class DlinhNFTWrapper {
+export class novoTokenWrapper {
     web3: Web3;
 
-    contract: DlinhNFT;
+    contract: novoToken;
 
     address: string;
 
     constructor(web3: Web3) {
         this.web3 = web3;
-        this.contract = new web3.eth.Contract(DlinhNFTJson.abi as any) as any;
+        this.contract = new web3.eth.Contract(novoTokenJson.abi as any) as any;
     }
 
     get isDeployed() {
@@ -69,7 +69,7 @@ export class DlinhNFTWrapper {
     async deploy(fromAddress: string) {
         const deployTx = await (this.contract
             .deploy({
-                data: DlinhNFTJson.bytecode,
+                data: novoTokenJson.bytecode,
                 arguments: []
             })
             .send({

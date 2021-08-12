@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { PolyjuiceHttpProvider } from '@polyjuice-provider/web3';
 import { AddressTranslator } from 'nervos-godwoken-integration';
 
-import { DlinhNFTWrapper } from '../lib/contracts/DlinhNFTWrapper';
+import { novoTokenWrapper } from '../lib/contracts/novoTokenWrapper';
 import { CONFIG } from '../config';
 
 async function createWeb3() {
@@ -41,7 +41,7 @@ async function createWeb3() {
 
 export function App() {
     const [web3, setWeb3] = useState<Web3>(null);
-    const [contract, setContract] = useState<DlinhNFTWrapper>();
+    const [contract, setContract] = useState<novoTokenWrapper>();
     const [accounts, setAccounts] = useState<string[]>();
     const [l2Balance, setL2Balance] = useState<bigint>();
     const [existingContractIdInputValue, setExistingContractIdInputValue] = useState<string>();
@@ -98,7 +98,7 @@ export function App() {
     }, [contract]);
 
     async function deployContract() {
-        const _contract = new DlinhNFTWrapper(web3);
+        const _contract = new novoTokenWrapper(web3);
 
         try {
             setDeployTxHash(undefined);
@@ -130,7 +130,7 @@ export function App() {
     // }
 
     async function setExistingContractAddress(contractAddress: string) {
-        const _contract = new DlinhNFTWrapper(web3);
+        const _contract = new novoTokenWrapper(web3);
         _contract.useDeployed(contractAddress.trim());
 
         setContract(_contract);
